@@ -6,187 +6,198 @@
     <title>BollzApp</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   </head>
   <body>
 
-    <!-- sfondo statico che prende tutto il viewport -->
-    <div class="background-top">
-    </div>
-    <div class="background-bot">
-    </div>
-    <!-- contenitore in posizione assoluta che funziona da finestra in cui andrà l'applicazione -->
-    <div id="app">
+    <div class="container">
 
-      <!-- macroblocco con 2 div flexati -->
-      <main>
-
-        <!-- macroblocco sinistro sezione contatti -->
-        <div class="macro-sx">
-
-          <!-- header sezione contatti -->
-          <div class="head">
-
-            <div class="user">
-              <img src="img/avatar_5.jpg" alt="">
-              <h5>Nome Utente</h5>
-            </div>
-            <div class="icons">
-
-              <a href="#">
-                <i style="color:white;" class="fas fa-comment-alt"></i>
-              </a>
-              <a href="#">
-                <i style="color:white;" class="fas fa-circle-notch"></i>
-              </a>
-              <a style="color:white;" href="#">
-                <i class="fas fa-ellipsis-v"></i>
-              </a>
-
-            </div>
-
-          </div>
-
-          <!-- banner x attivare notifiche -->
-          <div id="banner">
-
-            <a href="#"><i style="color:white;" class="fas fa-bell-slash"></i></a>
-            <div class="">
-              <h5>ricevi notifiche dei nuovi messaggi</h5>
-              <a href="#">attiva notifiche desktop
-              </a>
-            </div>
-
-
-          </div>
-
-          <!-- barra di ricerca -->
-          <div class="">
-
-            <button type="button" name="button">cerca</button>
-            <input type="text" name="" value="">
-
-          </div>
-
-          <!-- copertina chat aperte -->
-          <div class="chats">
-
-            <div class="head-friend">
-
-              <div class="">
-                <img src="img/avatar_1.jpg" alt="">
-              </div>
-              <div class="">
-                <h5>Nome</h5>
-                <h6>messaggio</h6>
-              </div>
-              <div class="">
-                <h6>data e ora</h6>
-              </div>
-
-            </div>
-            <div class="head-friend">
-
-              <div class="">
-                <img src="img/avatar_1.jpg" alt="">
-              </div>
-              <div class="">
-                <h5>Nome</h5>
-                <h6>messaggio</h6>
-              </div>
-              <div class="">
-                <h6>data e ora</h6>
-              </div>
-
-            </div>
-            <div class="head-friend">
-
-              <div class="">
-                <img src="img/avatar_1.jpg" alt="">
-              </div>
-              <div class="">
-                <h5>Nome</h5>
-                <h6>messaggio</h6>
-              </div>
-              <div class="">
-                <h6>data e ora</h6>
-              </div>
-
-            </div>
-            <div class="head-friend">
-
-              <div class="">
-                <img src="img/avatar_1.jpg" alt="">
-              </div>
-              <div class="">
-                <h5>Nome</h5>
-                <h6>messaggio</h6>
-              </div>
-              <div class="">
-                <h6>data e ora</h6>
-              </div>
-
-            </div>
-            <div class="head-friend">
-
-              <div class="">
-                <img src="img/avatar_1.jpg" alt="">
-              </div>
-              <div class="">
-                <h5>Nome</h5>
-                <h6>messaggio</h6>
-              </div>
-              <div class="">
-                <h6>data e ora</h6>
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <!-- macroblocco destro sezione chat -->
-        <div class="macro-dx">
-
-          <!-- header della sezione chat -->
-          <div class="head">
-
-            <div class="user">
-              <img src="img/avatar_5.jpg" alt="">
-              <h5>Nome Utente</h5>
-            </div>
-            <div class="icons">
-
-              <a href="#">
-                <i style="color:white;" class="fas fa-comment-alt"></i>
-              </a>
-              <a href="#">
-                <i style="color:white;" class="fas fa-circle-notch"></i>
-              </a>
-              <a style="color:white;" href="#">
-                <i class="fas fa-ellipsis-v"></i>
-              </a>
-
-            </div>
-
-          </div>
-
-          <!-- main della sezione chat -->
-          <div class="">
-
-          </div>
-
-          <!-- footer della sezione chat -->
-          <div class="">
-
-          </div>
-
-        </div>
+      <!-- sfondo statico che prende tutto il viewport -->
+      <div class="background-top">
+      </div>
+      <div class="background-bot">
 
       </div>
+        <!-- contenitore in posizione assoluta che funziona da finestra in cui andrà l'applicazione -->
+        <div id="app">
 
-    </main>
+          <!-- macroblocco con 2 div flexati -->
+          <main>
+
+            <!-- macroblocco sinistro sezione contatti -->
+            <div class="macro-sx">
+
+              <!-- header sezione contatti -->
+              <div class="head">
+
+                <div class="user">
+                  <img src="img/avatar_5.jpg" alt="">
+                  <h5>Nome Utente</h5>
+                </div>
+                <div class="icons">
+
+                  <a href="#">
+                    <i style="color:white;" class="fas fa-comment-alt"></i>
+                  </a>
+                  <a href="#">
+                    <i style="color:white;" class="fas fa-circle-notch"></i>
+                  </a>
+                  <a style="color:white;" href="#">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </a>
+
+                </div>
+
+              </div>
+
+              <!-- banner x attivare notifiche -->
+              <div id="banner">
+
+                <a href="#"><i style="color:white;" class="fas fa-bell-slash"></i></a>
+                <div class="">
+                  <h5>ricevi notifiche dei nuovi messaggi</h5>
+                  <a href="#">attiva notifiche desktop
+                  </a>
+                </div>
+
+
+              </div>
+
+              <!-- barra di ricerca -->
+              <div class="">
+
+                <button type="button" name="button">cerca</button>
+                <input type="text" name="" value="">
+
+              </div>
+
+              <!-- copertina chat aperte -->
+              <div class="chats">
+
+                <div class="head-friend">
+
+                  <div class="">
+                    <img src="img/avatar_1.jpg" alt="">
+                  </div>
+                  <div class="">
+                    <h5>Nome</h5>
+                    <h6>messaggio</h6>
+                  </div>
+                  <div class="">
+                    <h6>data e ora</h6>
+                  </div>
+
+                </div>
+                <div class="head-friend">
+
+                  <div class="">
+                    <img src="img/avatar_1.jpg" alt="">
+                  </div>
+                  <div class="">
+                    <h5>Nome</h5>
+                    <h6>messaggio</h6>
+                  </div>
+                  <div class="">
+                    <h6>data e ora</h6>
+                  </div>
+
+                </div>
+                <div class="head-friend">
+
+                  <div class="">
+                    <img src="img/avatar_1.jpg" alt="">
+                  </div>
+                  <div class="">
+                    <h5>Nome</h5>
+                    <h6>messaggio</h6>
+                  </div>
+                  <div class="">
+                    <h6>data e ora</h6>
+                  </div>
+
+                </div>
+                <div class="head-friend">
+
+                  <div class="">
+                    <img src="img/avatar_1.jpg" alt="">
+                  </div>
+                  <div class="">
+                    <h5>Nome</h5>
+                    <h6>messaggio</h6>
+                  </div>
+                  <div class="">
+                    <h6>data e ora</h6>
+                  </div>
+
+                </div>
+                <div class="head-friend">
+
+                  <div class="">
+                    <img src="img/avatar_1.jpg" alt="">
+                  </div>
+                  <div class="">
+                    <h5>Nome</h5>
+                    <h6>messaggio</h6>
+                  </div>
+                  <div class="">
+                    <h6>data e ora</h6>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- macroblocco destro sezione chat -->
+            <div class="macro-dx">
+
+              <!-- header della sezione chat -->
+              <header>
+
+                <div class="head">
+
+                  <div class="user">
+                    <img src="img/avatar_5.jpg" alt="">
+                    <h5>Nome Utente</h5>
+                  </div>
+                  <div class="icons">
+
+                    <a href="#">
+                      <i style="color:white;" class="fas fa-comment-alt"></i>
+                    </a>
+                    <a href="#">
+                      <i style="color:white;" class="fas fa-circle-notch"></i>
+                    </a>
+                    <a style="color:white;" href="#">
+                      <i class="fas fa-ellipsis-v"></i>
+                    </a>
+
+                  </div>
+
+                </div>
+
+              </header>
+
+
+              <!-- main della sezione chat -->
+              <div class="mainchat">
+
+              </div>
+
+              <!-- footer della sezione chat -->
+              <div class="foot">
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </main>
+      </div>
 
     <script src="js/script.js" charset="utf-8"></script>
+
   </body>
 </html>

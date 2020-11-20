@@ -13,6 +13,9 @@
   background-color: lightgrey;
   height: 80vh;
 }
+.container{
+  position: relative;
+}
 /* contenitore web app */
 #app{
   min-height: 90%;
@@ -23,7 +26,7 @@
   transform: translate(-50%, -50%);
   z-index: 1;
   /* debug */
-  background-color: white;
+  /* background-color: white; */
   /* debug */
 }
 img{
@@ -100,4 +103,27 @@ max-height: 300px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+
+
+/* sezione chat, MACROBLOCCO DESTRO */
+.mainchat{
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  height: 350px;
+  max-height: 350px;
+}
+.foot{
+  
+}
+
+
+
+/* REGOLE MEDIA QUERIES */
+/* REGOLE MEDIA QUERIES PARTICOLARI */
+@media all and (max-height: 580px){
+  .background-bot{
+    height: 120vh;
+  }
 }
