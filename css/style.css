@@ -58,8 +58,8 @@ main{
 
 /* debug div dei due macroblocchi app */
 .macro-sx div{
-  min-height: 100px;
-  background-color: blue;
+  min-height: 80px;
+  background-color: lightblue;
   border: 1px solid black;
 }
 .macro-dx div{
@@ -68,19 +68,36 @@ main{
   border: 1px solid black;
 }
 
-
+/* CLASSI USATE SU ENTRAMBI MACRO */
 /* head dei 2 macroelementi */
 .head{
   display: flex;
   justify-content: space-between;
 }
 /* fotouser con nome usato su entrambi head */
-.user{
+/* icone usate su entrambi head macroelementi */
+.user, .icons{
   display: flex;
   align-items: center;
 }
-/* icone usate su entrambi head macroelementi */
-.icons{
+
+#banner{
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* sezione chat aperte */
+.chats{
+display: flex;
+flex-direction: column;
+overflow-y: scroll;
+min-height: 100px;
+max-height: 300px;
+}
+/* ogni chat delle chats aperte */
+.head-friend{
+  display: flex;
+  justify-content: flex-start;
   align-items: center;
 }
