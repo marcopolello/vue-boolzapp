@@ -1,0 +1,76 @@
+/* regole generali */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* regole macroelementi */
+.background-top{
+  background-color: rgb(30, 219, 203);
+  height: 20vh;
+}
+.background-bot{
+  background-color: lightgrey;
+  height: 80vh;
+}
+.macro-container{
+  min-height: 95%;
+  min-width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  /* debug */
+  background-color: white;
+  /* debug */
+}
+.macro-container::after{
+  content: "";
+  clear: both;
+  display: table;
+}
+img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* 2 elementi macro: contatti e chat */
+.macro{
+  float: left;
+  /* debug */
+  background-color: blue;
+  min-height: 500px;
+  border: 1px solid black;
+  /* debug */
+}
+.sx{
+  width: 35%;
+}
+.dx{
+  width: 65%;
+}
+
+/* sezione macro sx con elenco contatti */
+
+/* sezione superiore con nav x l'user loggato */
+.nav-top{
+  /* debug */
+  background-color: white;
+  /* debug */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+.nav-top div:nth-child(2){
+  margin-left: 20px;
+}
+.nav-top div:last-child{
+  margin-left: 200px;
+}
+.nav-bot{
+  display: inline-block;
+  background-color: rgb(118, 242, 229)
+}
