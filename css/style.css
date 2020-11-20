@@ -13,8 +13,9 @@
   background-color: lightgrey;
   height: 80vh;
 }
-.macro-container{
-  min-height: 95%;
+/* contenitore web app */
+#app{
+  min-height: 90%;
   min-width: 90%;
   position: absolute;
   top: 50%;
@@ -25,52 +26,61 @@
   background-color: white;
   /* debug */
 }
-.macro-container::after{
-  content: "";
-  clear: both;
-  display: table;
-}
 img{
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  width: 60px;
+  height: 60px;
 }
-
-/* 2 elementi macro: contatti e chat */
-.macro{
-  float: left;
-  /* debug */
-  background-color: blue;
-  min-height: 500px;
-  border: 1px solid black;
-  /* debug */
-}
-.sx{
-  width: 35%;
-}
-.dx{
-  width: 65%;
-}
-
-/* sezione macro sx con elenco contatti */
-
-/* sezione superiore con nav x l'user loggato */
-.nav-top{
-  /* debug */
-  background-color: white;
-  /* debug */
+/* div che contiene i 2 macroblocchi flexxati */
+main{
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+
+/* debug dei 2 macroblocchi flexxati */
+[class*="macro-"] {
+  min-height: 100px;
+  max-height: 100%;
+  border: solid 1px black;
+  padding: 2px;
+  text-align: center;
+}
+/* fine debug */
+
+.macro-sx{
+  width: 35%;
+  background-color: white;
+}
+.macro-dx{
+  width: 65%;
+  background-image: url(../img/mine.jpg);
+}
+
+/* debug div dei due macroblocchi app */
+.macro-sx div{
+  min-height: 100px;
+  background-color: blue;
+  border: 1px solid black;
+}
+.macro-dx div{
+  min-height: 100px;
+  background-color: green;
+  border: 1px solid black;
+}
+
+
+/* head dei 2 macroelementi */
+.head{
+  display: flex;
+  justify-content: space-between;
+}
+/* fotouser con nome usato su entrambi head */
+.user{
+  display: flex;
   align-items: center;
-  padding: 5px;
 }
-.nav-top div:nth-child(2){
-  margin-left: 20px;
-}
-.nav-top div:last-child{
-  margin-left: 200px;
-}
-.nav-bot{
-  display: inline-block;
-  background-color: rgb(118, 242, 229)
+/* icone usate su entrambi head macroelementi */
+.icons{
+  display: flex;
+  align-items: center;
 }

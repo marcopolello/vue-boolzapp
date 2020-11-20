@@ -2,11 +2,10 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>BollzApp</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
   </head>
   <body>
 
@@ -16,59 +15,95 @@
     <div class="background-bot">
     </div>
     <!-- contenitore in posizione assoluta che funziona da finestra in cui andrà l'applicazione -->
-    <div class="macro-container">
+    <div id="app">
 
-      <!-- macroblocco sinistro -->
-      <div class="container macro sx">
+      <!-- macroblocco con 2 div flexati -->
+      <main>
 
-        <!-- nav sezione contatti -->
-        <nav>
+        <!-- macroblocco sinistro sezione contatti -->
+        <div class="macro-sx">
 
-          <!-- user che sta usando la webapp -->
-          <div class="nav-top">
+          <!-- header sezione contatti -->
+          <div class="head">
 
-            <!-- img user & id  -->
-            <div>
-              <img src="img/avatar_2.jpg">
+            <div class="user">
+              <img src="img/avatar_5.jpg" alt="">
+              <h5>Nome Utente</h5>
             </div>
-
-            <div>
-              <a href="#"><h5>Nome Utente</h5></a>
-            </div>
-
-            <!-- icone navbar user -->
-            <div>
+            <div class="icons">
 
               <a href="#">
-                <i class="fas fa-comment-alt"></i>
+                <i style="color:white;" class="fas fa-comment-alt"></i>
               </a>
               <a href="#">
-                <i class="fas fa-circle-notch"></i>
+                <i style="color:white;" class="fas fa-circle-notch"></i>
               </a>
-              <a href="#">
+              <a style="color:white;" href="#">
                 <i class="fas fa-ellipsis-v"></i>
               </a>
 
             </div>
 
           </div>
-          <!-- blocco attiva notifiche -->
-          <div class="nav-bot">
-            fsdseddwdwd
+
+          <!-- banner x attivare notifiche -->
+          <div class="">
 
           </div>
 
+          <!-- barra di ricerca -->
+          <div class="">
 
-        </nav>
+          </div>
+
+          <!-- copertina chat aperte -->
+          <div class="">
+
+          </div>
+
+        </div>
+
+        <!-- macroblocco destro sezione chat -->
+        <div class="macro-dx">
+
+          <!-- header della sezione chat -->
+          <div class="head">
+
+            <div class="user">
+              <img src="img/avatar_5.jpg" alt="">
+              <h5>Nome Utente</h5>
+            </div>
+            <div class="icons">
+
+              <a href="#">
+                <i style="color:white;" class="fas fa-comment-alt"></i>
+              </a>
+              <a href="#">
+                <i style="color:white;" class="fas fa-circle-notch"></i>
+              </a>
+              <a style="color:white;" href="#">
+                <i class="fas fa-ellipsis-v"></i>
+              </a>
+
+            </div>
+
+          </div>
+
+          <!-- main della sezione chat -->
+          <div class="">
+
+          </div>
+
+          <!-- footer della sezione chat -->
+          <div class="">
+
+          </div>
+
+        </div>
 
       </div>
 
-      <!-- macroblocco destro -->
-      <div class="container macro dx">
-
-      </div>
-
-    </div>
+    </main>
 
     <script src="js/script.js" charset="utf-8"></script>
   </body>
