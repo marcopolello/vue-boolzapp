@@ -32,6 +32,7 @@
 img{
   width: 60px;
   height: 60px;
+  border-radius: 50%;
 }
 /* div che contiene i 2 macroblocchi flexxati */
 main{
@@ -67,15 +68,17 @@ main{
 }
 .macro-dx div{
   min-height: 100px;
-  background-color: green;
+  /* background-color: green; */
   border: 1px solid black;
 }
 
 /* CLASSI USATE SU ENTRAMBI MACRO */
 /* head dei 2 macroelementi */
 .head{
+  padding: 5px;
   display: flex;
   justify-content: space-between;
+  background-color: lightgrey;
 }
 /* fotouser con nome usato su entrambi head */
 /* icone usate su entrambi head macroelementi */
@@ -83,23 +86,49 @@ main{
   display: flex;
   align-items: center;
 }
+.icons a{
+  margin: 0 10px;
 
+}
+/* banner x attivazione notitiche */
 #banner{
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  background-color: lightblue;
+  height: 60px;
+}
+#banner a{
+  margin: 0 30px;
+}
+#banner .testobanner{
+}
+/* barra di ricerca contatti */
+.ricerca-contatti{
+  display: flex;
+  height: 40px;
+}
+.ricerca-contatti button{
+  width: 15%;
+  background-color: white;
+}
+.ricerca-contatti input{
+  width: 85%;
 }
 
 /* sezione chat aperte */
 .chats{
-display: flex;
-flex-direction: column;
-overflow-y: scroll;
-min-height: 100px;
-max-height: 300px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  min-height: 100px;
+  max-height: 350px;
 }
 /* ogni chat delle chats aperte */
 .head-friend{
+  padding: 2px;
+  margin: 5px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -114,10 +143,32 @@ max-height: 300px;
   height: 350px;
   max-height: 350px;
 }
-.foot{
-  
+
+/* misure chat */
+.bloccochat{
+  display: flex;
+}
+.chatmin{
+  width: 40%;
+}
+.chatmax{
+  width: 60%;
 }
 
+
+
+
+
+.foot{
+  display: flex;
+  background-color: white;
+}
+.inputchat{
+  width: 80%;
+}
+.emo, .vocale{
+  width: 10%;
+}
 
 
 /* REGOLE MEDIA QUERIES */
