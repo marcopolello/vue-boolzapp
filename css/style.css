@@ -29,6 +29,7 @@
   /* background-color: white; */
   /* debug */
 }
+/* misure x tutte le img(foto contatti)*/
 img{
   width: 60px;
   height: 60px;
@@ -42,13 +43,13 @@ main{
 }
 
 /* debug dei 2 macroblocchi flexxati */
-[class*="macro-"] {
+/* [class*="macro-"] {
   min-height: 100px;
   max-height: 100%;
   border: solid 1px black;
   padding: 2px;
   text-align: center;
-}
+} */
 /* fine debug */
 
 .macro-sx{
@@ -61,16 +62,16 @@ main{
 }
 
 /* debug div dei due macroblocchi app */
-.macro-sx div{
+/* .macro-sx div{
   min-height: 80px;
   background-color: lightblue;
   border: 1px solid black;
-}
-.macro-dx div{
+} */
+/* .macro-dx div{
   min-height: 100px;
-  /* background-color: green; */
+  background-color: green;
   border: 1px solid black;
-}
+} */
 
 /* CLASSI USATE SU ENTRAMBI MACRO */
 /* head dei 2 macroelementi */
@@ -86,9 +87,11 @@ main{
   display: flex;
   align-items: center;
 }
+.macro-sx .user h5{
+  margin-left: 10px;
+}
 .icons a{
   margin: 0 10px;
-
 }
 /* banner x attivazione notitiche */
 #banner{
@@ -121,7 +124,7 @@ main{
   padding: 5px;
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
+  overflow-y: auto;
   min-height: 100px;
   max-height: 350px;
 }
@@ -130,23 +133,43 @@ main{
   padding: 2px;
   margin: 5px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
+}
+.interlocutore{
+  align-self: flex-start;
+  margin-top: 5px;
+  margin-right: 150px;
+}
+.datetimes{
+  align-self: flex-start;
+}
+.datetimes h6{
+  color: grey;
 }
 
 
+
 /* sezione chat, MACROBLOCCO DESTRO */
+header{
+  border: 1px solid black;
+}
 .mainchat{
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
+  overflow-y: auto;
   height: 350px;
   max-height: 350px;
+  border: 1px solid lightgrey;
+}
+.macro-dx .interlocutore{
+  margin-left: 10px;
 }
 
 /* misure chat */
 .bloccochat{
   display: flex;
+  padding: 20px;
 }
 .chatmin{
   width: 40%;
@@ -154,9 +177,20 @@ main{
 .chatmax{
   width: 60%;
 }
-
-
-
+/* chat user */
+.user p, .datetimes{
+  text-align: right;
+}
+.user .chatmax{
+  background-color: lightgreen;
+  border-radius: 5px;
+  padding: 10px;
+}
+.speaker .chatmax{
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+}
 
 
 .foot{
