@@ -191,6 +191,9 @@ header{
   border-radius: 5px;
   padding: 10px;
 }
+.mainchat .datetimes{
+  margin-top: 5px;
+}
 
 
 .foot{
