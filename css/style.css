@@ -104,8 +104,6 @@ main{
 #banner a{
   margin: 0 30px;
 }
-#banner .testobanner{
-}
 /* barra di ricerca contatti */
 .ricerca-contatti{
   display: flex;
