@@ -17,56 +17,66 @@ var app = new Vue ({
         immagine: "img/avatar_1.jpg",
         nome: "Paolo",
         messaggi: ["ciao come va?", "tutto bene grazie"],
-        dataEora: "23 11 2020 11:58:03"
+        dataEora: "23 11 2020 11:58:03",
+        msgSalvati: ["ehi, ti disturbo?"],
       },
       {
         immagine: "img/avatar_2.jpg",
         nome: "Luca",
         messaggi: ["mi annoio", "facciamo qualcosa", "oiiiii"],
-        dataEora: "23 11 2020 11:58:03"
+        dataEora: "23 11 2020 11:58:03",
+        msgSalvati: [],
       },
       {
         immagine: "img/avatar_3.jpg",
         nome: "Marco",
         messaggi: ["che fai?", "io sono in lavanderia"],
-        dataEora: "23 11 2020 11:58:03"
+        dataEora: "23 11 2020 11:58:03",
+        msgSalvati: [],
       },
       {
         immagine: "img/avatar_4.jpg",
         nome: "Michele",
         messaggi: ["non ci capisco un cazz", "è dura la vita", "ehhhh siiii"],
-        dataEora: "23 11 2020 11:58:03"
+        dataEora: "23 11 2020 11:58:03",
+        msgSalvati: [],
       },
       {
         immagine: "img/avatar_5.jpg",
         nome: "Andrea",
         messaggi: ["ciao come va?", "malissimo"],
-        dataEora: "23 11 2020 11:58:03"
+        dataEora: "23 11 2020 11:58:03",
+        msgSalvati: [],
+
       },
       {
         immagine: "img/avatar_6.jpg",
         nome: "Lucia",
         messaggi: ["mi piaci", "sono a casa da sola"],
-        dataEora: "23 11 2020 11:58:03"
+        dataEora: "23 11 2020 11:58:03",
+        msgSalvati: [],
       },
       {
         immagine: "img/avatar_7.jpg",
         nome: "Simone",
         messaggi: ["piaci a Lucia", "occhio perché ha le piattole", "scherzone xD"],
-        dataEora: "23 11 2020 11:58:03"
+        dataEora: "23 11 2020 11:58:03",
+        msgSalvati: [],
       },
     ],
-    counter: 0,
     // classi: "visibile, invisible",
     selectedName: "Paolo",
     selectedImm: "img/avatar_1.jpg",
     selectedMsg: ["ciao come va?", "tutto bene grazie"],
-    ultimo: msg
+    message: '',
+    salvali: [],
+  },
+  computed: {
+
   },
   methods: {
     // toggleClassi: () => { app.classi === "visible" ? app.classi = "invisible" : app.classi = "visible"},
     selezioneItem(item){
-      console.log(item);
       this.selectedName = null;
       this.selectedImm = null;
       this.selectedMsg = null;
@@ -74,12 +84,11 @@ var app = new Vue ({
       this.selectedImm = item.immagine;
       this.selectedMsg = item.messaggi;
     },
-    lastMsg(){
-      for (var i = 0; i < this.corrispondenze.mesaggi.length; i++) {
-        var ultimo = this.corrispondenze.mesaggi[i];
-      }
-      return ultimo;
-      console.log(ultimo);
+    inviaMsg: function () {
+      this.salvali.push(this.message);
+      this.corrispondenze[0].msgSalvati = this.salvali;
+      console.log(this.corrispondenze);
+      this.message = '';
     }
   }
 })
