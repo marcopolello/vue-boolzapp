@@ -22,49 +22,56 @@ var app = new Vue ({
       {
         immagine: "img/avatar_2.jpg",
         nome: "Luca",
-        messaggi: ["ciao come va?", "tutto bene grazie"],
+        messaggi: ["mi annoio", "facciamo qualcosa", "oiiiii"],
         dataEora: "23 11 2020 11:58:03"
       },
       {
         immagine: "img/avatar_3.jpg",
         nome: "Marco",
-        messaggi: ["ciao come va?", "tutto bene grazie"],
+        messaggi: ["che fai?", "io sono in lavanderia"],
         dataEora: "23 11 2020 11:58:03"
       },
       {
         immagine: "img/avatar_4.jpg",
         nome: "Michele",
-        messaggi: ["ciao come va?", "tutto bene grazie"],
+        messaggi: ["non ci capisco un cazz", "è dura la vita", "ehhhh siiii"],
         dataEora: "23 11 2020 11:58:03"
       },
       {
         immagine: "img/avatar_5.jpg",
         nome: "Andrea",
-        messaggi: ["ciao come va?", "tutto bene grazie"],
+        messaggi: ["ciao come va?", "malissimo"],
         dataEora: "23 11 2020 11:58:03"
       },
       {
         immagine: "img/avatar_6.jpg",
         nome: "Lucia",
-        messaggi: ["ciao come va?", "tutto bene grazie"],
+        messaggi: ["mi piaci", "sono a casa da sola"],
         dataEora: "23 11 2020 11:58:03"
       },
       {
         immagine: "img/avatar_7.jpg",
         nome: "Simone",
-        messaggi: ["ciao come va?", "tutto bene grazie"],
+        messaggi: ["piaci a Lucia", "occhio perché ha le piattole", "scherzone xD"],
         dataEora: "23 11 2020 11:58:03"
       },
     ],
     counter: 0,
-    classi: "visibile, invisible",
+    // classi: "visibile, invisible",
     selectedName: "Paolo",
+    selectedImm: "img/avatar_1.jpg",
+    selectedMsg: ["ciao come va?", "tutto bene grazie"],
   },
   methods: {
-    toggleClassi: () => { app.classi === "visible" ? app.classi = "invisible" : app.classi = "visible"},
+    // toggleClassi: () => { app.classi === "visible" ? app.classi = "invisible" : app.classi = "visible"},
     selezioneItem(item){
-      this.selectedName = null
+      console.log(item);
+      this.selectedName = null;
+      this.selectedImm = null;
+      this.selectedMsg = null;
       this.selectedName = item.nome;
+      this.selectedImm = item.immagine;
+      this.selectedMsg = item.messaggi;
      }
   }
 })
