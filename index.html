@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   </head>
   <body>
 
@@ -27,7 +28,7 @@
             <!-- macroblocco sinistro sezione contatti -->
             <div class="macro-sx">
 
-              <!-- header sezione contatti -->
+              <!-- header  -->
               <div class="head">
 
                 <div class="user">
@@ -74,59 +75,17 @@
               <!-- copertina chat aperte -->
               <div class="chats">
 
-                <div class="head-friend">
+                <div v-for="(item, i) in corrispondenze" class="head-friend">
 
-                  <div class="">
-                    <img src="img/avatar_1.jpg" alt="">
+                  <div class="avatar">
+                    <img :src="corrispondenze[i].immagine" alt="">
                   </div>
                   <div class="interlocutore">
-                    <h5>Paolo</h5>
-                    <h6>ok..</h6>
+                    <h5>{{corrispondenze[i].nome}}</h5>
+                    <h6>{{corrispondenze[i].messaggi[1]}}</h6>
                   </div>
-                  <div class="datetimes">
-                    <h6>22 11 2020  10:52:03</h6>
-                  </div>
-
-                </div>
-                <div class="head-friend">
-
-                  <div class="">
-                    <img src="img/avatar_2.jpg" alt="">
-                  </div>
-                  <div class="interlocutore">
-                    <h5>Paolo</h5>
-                    <h6>ok..</h6>
-                  </div>
-                  <div class="datetimes">
-                    <h6>22 11 2020  10:52:03</h6>
-                  </div>
-
-                </div>
-                <div class="head-friend">
-
-                  <div class="">
-                    <img src="img/avatar_3.jpg" alt="">
-                  </div>
-                  <div class="interlocutore">
-                    <h5>Paolo</h5>
-                    <h6>ok..</h6>
-                  </div>
-                  <div class="datetimes">
-                    <h6>22 11 2020  10:52:03</h6>
-                  </div>
-
-                </div>
-                <div class="head-friend">
-
-                  <div class="">
-                    <img src="img/avatar_4.jpg" alt="">
-                  </div>
-                  <div class="interlocutore">
-                    <h5>Paolo</h5>
-                    <h6>ok..</h6>
-                  </div>
-                  <div class="datetimes">
-                    <h6>22 11 2020  10:52:03</h6>
+                  <div class="datetimes-sx">
+                    <h6>{{corrispondenze[i].dataEora}}</h6>
                   </div>
 
                 </div>
@@ -146,7 +105,7 @@
                   <div class="user">
                     <img src="img/avatar_6.jpg" alt="">
                     <div class="interlocutore">
-                      <h5>Paolo</h5>
+                      <h5>Lucia</h5>
                       <h6>Ultimo accesso oggi alle 12:01:03 del 22 11 2020</h6>
                     </div>
                   </div>
