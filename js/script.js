@@ -61,6 +61,7 @@ var app = new Vue ({
     selectedName: "Paolo",
     selectedImm: "img/avatar_1.jpg",
     selectedMsg: ["ciao come va?", "tutto bene grazie"],
+    ultimo: msg
   },
   methods: {
     // toggleClassi: () => { app.classi === "visible" ? app.classi = "invisible" : app.classi = "visible"},
@@ -72,6 +73,13 @@ var app = new Vue ({
       this.selectedName = item.nome;
       this.selectedImm = item.immagine;
       this.selectedMsg = item.messaggi;
-     }
+    },
+    lastMsg(){
+      for (var i = 0; i < this.corrispondenze.mesaggi.length; i++) {
+        var ultimo = this.corrispondenze.mesaggi[i];
+      }
+      return ultimo;
+      console.log(ultimo);
+    }
   }
 })
