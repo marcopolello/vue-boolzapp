@@ -234,6 +234,16 @@ header{
   justify-content: center;
 }
 
+/* classe utili x js */
+.invisible{
+  display: none;
+}
+.visible{
+  display: block;
+}
+
+
+
 
 /* REGOLE MEDIA QUERIES */
 /* REGOLE MEDIA QUERIES PARTICOLARI */

@@ -39,25 +39,32 @@ var app = new Vue ({
       },
       {
         immagine: "img/avatar_5.jpg",
-        nome: "Paolo",
+        nome: "Andrea",
         messaggi: ["ciao come va?", "tutto bene grazie"],
         dataEora: "23 11 2020 11:58:03"
       },
       {
         immagine: "img/avatar_6.jpg",
-        nome: "Paolo",
+        nome: "Lucia",
         messaggi: ["ciao come va?", "tutto bene grazie"],
         dataEora: "23 11 2020 11:58:03"
       },
       {
         immagine: "img/avatar_7.jpg",
-        nome: "Paolo",
+        nome: "Simone",
         messaggi: ["ciao come va?", "tutto bene grazie"],
         dataEora: "23 11 2020 11:58:03"
       },
-    ]
+    ],
+    counter: 0,
+    classi: "visibile, invisible",
+    selectedName: "Paolo",
   },
   methods: {
-
+    toggleClassi: () => { app.classi === "visible" ? app.classi = "invisible" : app.classi = "visible"},
+    selezioneItem(item){
+      this.selectedName = null
+      this.selectedName = item.nome;
+     }
   }
 })

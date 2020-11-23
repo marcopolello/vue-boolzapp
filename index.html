@@ -75,7 +75,7 @@
               <!-- copertina chat aperte -->
               <div class="chats">
 
-                <div v-for="(item, i) in corrispondenze" class="head-friend">
+                <div @click="selezioneItem(item)" v-for="(item, i) in corrispondenze" :key="item.id" class="head-friend">
 
                   <div class="avatar">
                     <img :src="corrispondenze[i].immagine" alt="">
@@ -98,15 +98,47 @@
             <div class="macro-dx">
 
               <!-- header della sezione chat -->
-              <header>
+
+              <!-- header statico iniziale -->
+              <header class="">
 
                 <div class="head">
 
                   <div class="user">
-                    <img src="img/avatar_6.jpg" alt="">
+                    <img :src="corrispondenze[0].immagine" alt="">
                     <div class="interlocutore">
-                      <h5>Lucia</h5>
-                      <h6>Ultimo accesso oggi alle 12:01:03 del 22 11 2020</h6>
+                      <h5>{{selectedName}}</h5>
+                      <h6>{{corrispondenze[0].dataEora}}</h6>
+                    </div>
+                  </div>
+                  <div class="icons">
+
+                    <a href="#">
+                      <i style="color:white;" class="fas fa-search"></i>
+                    </a>
+                    <a href="#">
+                      <i style="color:white;" class="fas fa-paperclip"></i>
+                    </a>
+                    <a style="color:white;" href="#">
+                      <i class="fas fa-ellipsis-v"></i>
+                    </a>
+
+                  </div>
+
+                </div>
+
+              </header>
+
+              <!-- header dinamico -->
+              <header class="invisible">
+
+                <div v-for="(item, i) in corrispondenze" class="head">
+
+                  <div class="user">
+                    <img :src="corrispondenze[i].immagine" alt="">
+                    <div class="interlocutore">
+                      <h5>{{corrispondenze[i].nome}}</h5>
+                      <h6>{{corrispondenze[i].dataEora}}</h6>
                     </div>
                   </div>
                   <div class="icons">
