@@ -21,13 +21,13 @@ var app = new Vue ({
           {
             text: "ciao",
             stato: "inviato",
-            orario: "12:03 24 11 2020",
+            orario: "12:03",
             data: "24 11 2020"
           },
           {
             text: "ehila",
             stato: "ricevuto",
-            orario: "12:04 24 11 2020",
+            orario: "12:04",
             data: "24 11 2020"
           },
           {
@@ -46,13 +46,13 @@ var app = new Vue ({
           {
             text: "oibò",
             stato: "inviato",
-            orario: "12:03 24 11 2020",
+            orario: "12:03",
             data: "24 11 2020"
           },
           {
             text: "ciao sono Luca",
             stato: "ricevuto",
-            orario: "12:04 24 11 2020",
+            orario: "12:04",
             data: "24 11 2020"
           },
           {
@@ -117,7 +117,7 @@ var app = new Vue ({
             data: "24 11 2020"
           },
         ],
-        dataEora: "23 11 2020 11:58:03",
+        dataEora: "23 11 2020",
       },
       {
         immagine: "img/avatar_4.jpg",
@@ -126,13 +126,13 @@ var app = new Vue ({
           {
             text: "ciao",
             stato: "inviato",
-            orario: "12:03 24 11 2020",
+            orario: "12:03",
             data: "24 11 2020"
           },
           {
             text: "ehila sono Michele",
             stato: "ricevuto",
-            orario: "12:04 24 11 2020",
+            orario: "12:04",
             data: "24 11 2020"
           },
           {
@@ -151,13 +151,13 @@ var app = new Vue ({
           {
             text: "ehi, Andrea",
             stato: "inviato",
-            orario: "12:03 24 11 2020",
+            orario: "12:03",
             data: "24 11 2020"
           },
           {
             text: "ehila sono Andrea",
             stato: "ricevuto",
-            orario: "12:04 24 11 2020",
+            orario: "12:04",
             data: "24 11 2020"
           },
           {
@@ -177,13 +177,13 @@ var app = new Vue ({
           {
             text: "ciao sono Io",
             stato: "inviato",
-            orario: "12:03 24 11 2020",
+            orario: "12:03",
             data: "24 11 2020"
           },
           {
             text: "ehila sono Lucia",
             stato: "ricevuto",
-            orario: "12:04 24 11 2020",
+            orario: "12:04",
             data: "24 11 2020"
           },
           {
@@ -202,13 +202,13 @@ var app = new Vue ({
           {
             text: "ciao",
             stato: "inviato",
-            orario: "12:03 24 11 2020",
+            orario: "12:03",
             data: "24 11 2020"
           },
           {
             text: "ehila sono Simone",
             stato: "ricevuto",
-            orario: "12:04 24 11 2020",
+            orario: "12:04",
             data: "24 11 2020"
           },
           {
