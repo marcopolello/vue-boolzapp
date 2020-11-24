@@ -167,28 +167,48 @@ main{
 header{
   border-left: 1px solid grey;
 }
-.mainchat{
-  display: flex;
-  flex-direction: column;
-  overflow-y: auto;
-  height: 390px;
-  max-height: 390px;
-  border: 1px solid lightgrey;
-}
 .macro-dx .interlocutore{
   margin-left: 10px;
 }
 
-/* misure chat */
-.bloccochat{
-  display: flex;
+/* blocco in cui compaiono le chat */
+.mainchat{
+  overflow-y: auto;
+  height: 390px;
+  max-height: 390px;
+  border: 1px solid lightgrey;
   padding: 20px;
 }
-.chatmin{
-  width: 40%;
+.mainchat::after {
+  content: "";
+  clear: both;
+  display: table;
 }
-.chatmax{
+
+
+/* misure chat */
+.bloccochat{
+
+}
+
+/* messaggio inviato, classe dinamica */
+.inviato{
+  float: right;
+  background-color: lightgreen;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: right;
   width: 60%;
+  margin-bottom: 20px;
+}
+/* messaggio ricevuto, classe dinamica */
+.ricevuto{
+  float: left;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  width: 60%;
+  margin-bottom: 10px;
 }
 /* chat user */
 .user p, .datetimes{

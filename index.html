@@ -75,17 +75,18 @@
               <!-- copertina chat aperte -->
               <div class="chats">
 
-                <div @click="selezioneItem(item)" v-for="(item, i) in corrispondenze" :key="item.id" class="head-friend">
+                <div @click="selezioneItem(i)" v-for="(item, i) in corrispondenze" :key="item.id" class="head-friend">
 
                   <div class="avatar">
                     <img :src="corrispondenze[i].immagine" alt="">
                   </div>
                   <div class="interlocutore">
                     <h5>{{corrispondenze[i].nome}}</h5>
-                    <h6>{{ corrispondenze[i].messaggi[corrispondenze[i].messaggi.length - 1] }}</h6>
+                    <h6>{{ corrispondenze[i].messaggi[corrispondenze[i].messaggi.length - 1].text }}</h6>
                   </div>
                   <div class="datetimes-sx">
-                    <h6>{{corrispondenze[i].dataEora}}</h6>
+                    <h6>{{ corrispondenze[i].messaggi[corrispondenze[i].messaggi.length - 1].orario }}</h6>
+                    <h6>{{ corrispondenze[i].messaggi[corrispondenze[i].messaggi.length - 1].data }}</h6>
                   </div>
 
                 </div>
@@ -103,10 +104,12 @@
                 <div class="head">
 
                   <div class="user">
-                    <img :src="selectedImm" alt="">
+                    <img :src="corrispondenze[attivo].immagine" alt="">
                     <div class="interlocutore">
-                      <h5>{{selectedName}}</h5>
-                      <h6>{{corrispondenze[0].dataEora}}</h6>
+                      <h5>{{corrispondenze[attivo].nome}}</h5>
+                      <h6>Ultimo accesso:</h6>
+                      <h6>{{corrispondenze[attivo].messaggi[corrispondenze[attivo].messaggi.length - 1].data}}</h6>
+                      <h6>{{corrispondenze[attivo].messaggi[corrispondenze[attivo].messaggi.length - 1].orario}}</h6>
                     </div>
                   </div>
                   <div class="icons">
@@ -130,34 +133,12 @@
               <!-- main della sezione chat -->
               <div class="mainchat">
 
-                <div v-for="(item, i) in salvali" class="bloccochat user">
+                <div v-for="(messaggio, index) in corrispondenze[attivo].messaggi" :class="messaggio.stato" class="bloccochat">
 
-                  <div class="chatmin">
+                  <div class="messaggio">
 
-                  </div>
-                  <div class="chatmax">
-
-                    <p> {{item}} </p>
-
-                    <div class="datetimes">
-                      <h6>22 11 2020  10:52:03</h6>
-                    </div>
-
-                  </div>
-
-                </div>
-
-                <div v-for="(item, i) in selectedMsg" class="bloccochat speaker">
-
-                  <div class="chatmax">
-
-                    <p>{{selectedMsg[i]}}</p>
-                    <div class="datetimes">
-                      <h6>22 11 2020  10:52:03</h6>
-                    </div>
-
-                  </div>
-                  <div class="chatmin">
+                    {{messaggio.text}}
+                    {{messaggio.stato}}
 
                   </div>
 
