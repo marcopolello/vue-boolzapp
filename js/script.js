@@ -215,6 +215,7 @@ var app = new Vue ({
     ],
     // classi: "visibile, invisible",
     message: "",
+    timer: null,
   },
   computed: {
 
@@ -227,18 +228,35 @@ var app = new Vue ({
     },
     inviaMsg: function () {
       // devo creare un nuovo oggetto nell'array messaggi
-      // ho una stringa che deve diventare la proprietò di un oggetto
       let nuovoObj = {
         text: "",
         stato: "inviato",
         orario: "12:05",
         data: "24 11 2020"
       };
+      // l'input utente diventa il valore della chiave text
       nuovoObj.text = this.message;
+      // pusho il nuovo oggetto all'interno dell'array
       this.corrispondenze[this.attivo].messaggi.push(nuovoObj);
-      console.log(this.corrispondenze);
-      // reset dell'input
+      // console.log(this.corrispondenze);
+
+      // reset dell'input x nuovo msg
       this.message= "";
+    },
+    // funzione che scatena il timer
+    autoMsg: function (event) {
+      this.timer = setTimeout(this.randomMsg, 2000);
+    },
+    // funzione che crea nuovo obj allo scadere del timer
+    randomMsg() {
+      // stampo un oggetto ricevuto random
+      let nuovoObj = {
+        text: "sono passati già 2 secondi!?",
+        stato: "ricevuto",
+        orario: "12:08",
+        data: "24 11 2020"
+      };
+      this.corrispondenze[this.attivo].messaggi.push(nuovoObj);
     }
   }
 })

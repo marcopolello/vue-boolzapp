@@ -165,12 +165,12 @@
                 <!-- input per scrivere sulla chat -->
                 <div class="inputchat">
 
-                  <input v-on:keyup.enter="inviaMsg" v-model="message" placeholder="scrivi un messaggio" type="text" name="" value="">
+                  <input v-on:keyup.enter="inviaMsg(); autoMsg(event)" v-model="message" placeholder="scrivi un messaggio" type="text" name="" value="">
 
                 </div>
 
                 <!-- bottone per msg vocale -->
-                <div @click="inviaMsg" class="vocale">
+                <div @click="inviaMsg(); autoMsg(event)" class="vocale">
 
                   <a href="#"><i class="fas fa-microphone fa-2x"></i></a>
 
