@@ -135,6 +135,7 @@
 
                 <div v-for="(messaggio, index) in corrispondenze[attivo].messaggi" :class="messaggio.stato" class="bloccochat">
 
+
                   <div class="messaggio">
 
                     <span style="font-size: 18px;">{{messaggio.text}}</span>
@@ -145,7 +146,9 @@
 
                   </div>
 
+
                 </div>
+                <br>
 
               </div>
 
@@ -167,7 +170,7 @@
                 </div>
 
                 <!-- bottone per msg vocale -->
-                <div class="vocale">
+                <div @click="inviaMsg" class="vocale">
 
                   <a href="#"><i class="fas fa-microphone fa-2x"></i></a>
 

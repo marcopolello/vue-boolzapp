@@ -37,7 +37,6 @@ var app = new Vue ({
             data: "24 11 2020"
           },
         ],
-        dataEora: "23 11 2020 11:58:03",
       },
       {
         immagine: "img/avatar_2.jpg",
@@ -62,7 +61,6 @@ var app = new Vue ({
             data: "24 11 2020"
           },
         ],
-        dataEora: "23 11 2020 11:58:03",
       },
       {
         immagine: "img/avatar_3.jpg",
@@ -117,7 +115,6 @@ var app = new Vue ({
             data: "24 11 2020"
           },
         ],
-        dataEora: "23 11 2020",
       },
       {
         immagine: "img/avatar_4.jpg",
@@ -142,7 +139,6 @@ var app = new Vue ({
             data: "24 11 2020"
           },
         ],
-        dataEora: "23 11 2020 11:58:03",
       },
       {
         immagine: "img/avatar_5.jpg",
@@ -167,8 +163,6 @@ var app = new Vue ({
             data: "24 11 2020"
           },
         ],
-        dataEora: "23 11 2020 11:58:03",
-
       },
       {
         immagine: "img/avatar_6.jpg",
@@ -193,7 +187,6 @@ var app = new Vue ({
             data: "24 11 2020"
           },
         ],
-        dataEora: "23 11 2020 11:58:03",
       },
       {
         immagine: "img/avatar_7.jpg",
@@ -218,12 +211,10 @@ var app = new Vue ({
             data: "24 11 2020"
           },
         ],
-        dataEora: "23 11 2020 11:58:03",
       },
     ],
     // classi: "visibile, invisible",
-    message: '',
-    salvali: [],
+    message: "",
   },
   computed: {
 
@@ -235,10 +226,19 @@ var app = new Vue ({
       this.attivo = i;
     },
     inviaMsg: function () {
-      this.salvali.push(this.message);
-      this.corrispondenze[0].msgSalvati = this.salvali;
+      // devo creare un nuovo oggetto nell'array messaggi
+      // ho una stringa che deve diventare la proprietò di un oggetto
+      let nuovoObj = {
+        text: "",
+        stato: "inviato",
+        orario: "12:05",
+        data: "24 11 2020"
+      };
+      nuovoObj.text = this.message;
+      this.corrispondenze[this.attivo].messaggi.push(nuovoObj);
       console.log(this.corrispondenze);
-      this.message = '';
+      // reset dell'input
+      this.message= "";
     }
   }
 })
