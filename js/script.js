@@ -71,13 +71,13 @@ var app = new Vue ({
           {
             text: "chi sei?",
             stato: "inviato",
-            orario: "12:03 24 11 2020",
+            orario: "12:03",
             data: "24 11 2020"
           },
           {
             text: "ciao sono Marco",
             stato: "ricevuto",
-            orario: "12:04 24 11 2020",
+            orario: "12:04",
             data: "24 11 2020"
           },
           {
@@ -101,19 +101,19 @@ var app = new Vue ({
           {
             text: "chi sei?",
             stato: "inviato",
-            orario: "12:03 24 11 2020",
+            orario: "12:03",
             data: "24 11 2020"
           },
           {
             text: "ciao sono Marco",
             stato: "ricevuto",
-            orario: "12:04 24 11 2020",
+            orario: "12:04",
             data: "24 11 2020"
           },
           {
             text: "ciao sono Marco",
             stato: "ricevuto",
-            orario: "12:04 24 11 2020",
+            orario: "12:04",
             data: "24 11 2020"
           },
         ],
