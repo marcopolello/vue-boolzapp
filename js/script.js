@@ -213,15 +213,14 @@ var app = new Vue ({
         ],
       },
     ],
-    // classi: "visibile, invisible",
     message: "",
     timer: null,
+    complete: false, //check se funzione di invio msg è completa
   },
   computed: {
 
   },
   methods: {
-    // toggleClassi: () => { app.classi === "visible" ? app.classi = "invisible" : app.classi = "visible"},
     selezioneItem(i){
       // rendo item preso al click attivo
       this.attivo = i;
@@ -237,7 +236,12 @@ var app = new Vue ({
       // l'input utente diventa il valore della chiave text
       nuovoObj.text = this.message;
       // pusho il nuovo oggetto all'interno dell'array
-      this.corrispondenze[this.attivo].messaggi.push(nuovoObj);
+      if (this.message == "") {
+        // se non scrivo niente in chat non succede nulla
+      } else {
+        this.corrispondenze[this.attivo].messaggi.push(nuovoObj);
+        this.complete = true; //push completato
+      }
       // console.log(this.corrispondenze);
 
       // reset dell'input x nuovo msg
@@ -245,7 +249,11 @@ var app = new Vue ({
     },
     // funzione che scatena il timer
     autoMsg: function (event) {
-      this.timer = setTimeout(this.randomMsg, 2000);
+      // se l'invio del msg è stato completato
+      if (this.complete == true) {
+        this.timer = setTimeout(this.randomMsg, 2000);
+        this.complete = false;
+      }
     },
     // funzione che crea nuovo obj allo scadere del timer
     randomMsg() {
