@@ -68,14 +68,14 @@
               <div class="ricerca-contatti">
 
                 <button type="button" name="button"><i style="color:grey;" class="fas fa-search"></i></button>
-                <input type="text" name="" value="">
+                <input v-model="contatto" @input="cercaContatto()" type="text" name="" value="">
 
               </div>
 
               <!-- copertina chat aperte -->
               <div class="chats">
 
-                <div @click="selezioneItem(i)" v-for="(item, i) in corrispondenze" :key="item.id" class="head-friend">
+                <div v-if="item.visible" @click="selezioneItem(i)" v-for="(item, i) in corrispondenze" :key="item.id" class="head-friend">
 
                   <div class="avatar">
                     <img :src="corrispondenze[i].immagine" alt="">

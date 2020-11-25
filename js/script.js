@@ -37,6 +37,7 @@ var app = new Vue ({
             data: "24 11 2020"
           },
         ],
+        visible: true
       },
       {
         immagine: "img/avatar_2.jpg",
@@ -61,6 +62,7 @@ var app = new Vue ({
             data: "24 11 2020"
           },
         ],
+        visible: true
       },
       {
         immagine: "img/avatar_3.jpg",
@@ -115,6 +117,7 @@ var app = new Vue ({
             data: "24 11 2020"
           },
         ],
+        visible: true
       },
       {
         immagine: "img/avatar_4.jpg",
@@ -139,6 +142,7 @@ var app = new Vue ({
             data: "24 11 2020"
           },
         ],
+        visible: true
       },
       {
         immagine: "img/avatar_5.jpg",
@@ -163,6 +167,7 @@ var app = new Vue ({
             data: "24 11 2020"
           },
         ],
+        visible: true
       },
       {
         immagine: "img/avatar_6.jpg",
@@ -187,6 +192,7 @@ var app = new Vue ({
             data: "24 11 2020"
           },
         ],
+        visible: true
       },
       {
         immagine: "img/avatar_7.jpg",
@@ -211,11 +217,13 @@ var app = new Vue ({
             data: "24 11 2020"
           },
         ],
+        visible: true
       },
     ],
     message: "",
     timer: null,
     complete: false, //check se funzione di invio msg è completa
+    contatto: "",
   },
   computed: {
 
@@ -265,6 +273,18 @@ var app = new Vue ({
         data: "24 11 2020"
       };
       this.corrispondenze[this.attivo].messaggi.push(nuovoObj);
+    },
+    cercaContatto() {
+      this.corrispondenze.forEach((item, i) => {
+        let nome = item.nome;
+        nome = nome.toLowerCase();
+        if (nome.includes(this.contatto)) {
+          item.visible = true;
+        } else {
+          item.visible = false;
+        }
+      });
+
     }
   }
 })
