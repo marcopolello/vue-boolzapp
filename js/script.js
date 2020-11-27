@@ -222,6 +222,11 @@ var app = new Vue ({
       // rendo item preso al click attivo
       this.attivo = i;
     },
+    checkIfActive: function (indice) {
+      if (indice == this.attivo){
+        return "selected"
+      }
+    },
     inviaMsg: function () {
       // devo creare un nuovo oggetto nell'array messaggi
       let nuovoObj = {
