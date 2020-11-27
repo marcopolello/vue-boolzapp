@@ -14,166 +14,81 @@
     <div class="container">
 
       <!-- sfondo statico che prende tutto il viewport -->
+      <!-- blocco azzurro sopra -->
       <div class="background-top">
       </div>
+      <!-- blocco bianco sotto -->
       <div class="background-bot">
-
       </div>
-        <!-- contenitore in posizione assoluta che funziona da finestra in cui andrà l'applicazione -->
-        <div id="app">
 
-          <!-- macroblocco con 2 div flexati -->
-          <main>
+      <!-- contenitore in posizione assoluta che funziona da finestra in cui andrà l'applicazione -->
+      <div id="app">
 
-            <!-- macroblocco sinistro sezione contatti -->
-            <div class="macro-sx">
+        <!-- macroblocco con 2 div flexati -->
+        <main>
 
-              <!-- header  -->
-              <div class="head">
+          <!-- macroblocco sinistro sezione contatti -->
+          <div class="macro-sx">
 
-                <div class="user">
-                  <img src="img/avatar_5.jpg" alt="">
-                  <h5>Nome Utente</h5>
-                </div>
-                <div class="icons">
+            <!-- header  -->
+            <div class="head">
 
-                  <a href="#">
-                    <i style="color:white;" class="fas fa-comment-alt"></i>
-                  </a>
-                  <a href="#">
-                    <i style="color:white;" class="fas fa-circle-notch"></i>
-                  </a>
-                  <a style="color:white;" href="#">
-                    <i class="fas fa-ellipsis-v"></i>
-                  </a>
-
-                </div>
-
+              <div class="user">
+                <img src="img/avatar_5.jpg" alt="">
+                <h5>Nome Utente</h5>
               </div>
 
-              <!-- banner x attivare notifiche -->
-              <div id="banner">
+              <div class="icons">
 
-                <a href="#"><i style="color:lightblue;" class="fas fa-bell-slash fa-2x"></i></a>
-                <div class="testobanner">
-                  <h5>Ricevi notifiche dei nuovi messaggi</h5>
-                  <a href="#">attiva notifiche desktop
-                  </a>
-                </div>
-
-
-              </div>
-
-              <!-- barra di ricerca -->
-              <div class="ricerca-contatti">
-
-                <button type="button" name="button"><i style="color:grey;" class="fas fa-search"></i></button>
-                <input v-model="contatto" @input="cercaContatto()" type="text" name="" value="">
-
-              </div>
-
-              <!-- copertina chat aperte -->
-              <div class="chats">
-
-                <div v-if="item.visible" @click="selezioneItem(i)" v-for="(item, i) in corrispondenze" :key="item.id" class="head-friend">
-
-                  <div class="avatar">
-                    <img :src="corrispondenze[i].immagine" alt="">
-                  </div>
-                  <div class="interlocutore">
-                    <h5>{{corrispondenze[i].nome}}</h5>
-                    <h6>{{ corrispondenze[i].messaggi[corrispondenze[i].messaggi.length - 1].text }}</h6>
-                  </div>
-                  <div class="datetimes-sx">
-                    <h6>{{ corrispondenze[i].messaggi[corrispondenze[i].messaggi.length - 1].orario }}</h6>
-                    <h6>{{ corrispondenze[i].messaggi[corrispondenze[i].messaggi.length - 1].data }}</h6>
-                  </div>
-
-                </div>
+                <a href="#">
+                  <i style="color:white;" class="fas fa-comment-alt"></i>
+                </a>
+                <a href="#">
+                  <i style="color:white;" class="fas fa-circle-notch"></i>
+                </a>
+                <a style="color:white;" href="#">
+                  <i class="fas fa-ellipsis-v"></i>
+                </a>
 
               </div>
 
             </div>
 
-            <!-- macroblocco destro sezione chat -->
-            <div class="macro-dx">
+            <!-- banner x attivare notifiche -->
+            <div id="banner">
 
-              <!-- header della sezione chat -->
-              <heade>
-
-                <div class="head">
-
-                  <div class="user">
-                    <img :src="corrispondenze[attivo].immagine" alt="">
-                    <div class="interlocutore">
-                      <h5>{{corrispondenze[attivo].nome}}</h5>
-                      <h6>Ultimo accesso:</h6>
-                      <h6>{{corrispondenze[attivo].messaggi[corrispondenze[attivo].messaggi.length - 1].data}}</h6>
-                      <h6>{{corrispondenze[attivo].messaggi[corrispondenze[attivo].messaggi.length - 1].orario}}</h6>
-                    </div>
-                  </div>
-                  <div class="icons">
-
-                    <a href="#">
-                      <i style="color:white;" class="fas fa-search"></i>
-                    </a>
-                    <a href="#">
-                      <i style="color:white;" class="fas fa-paperclip"></i>
-                    </a>
-                    <a style="color:white;" href="#">
-                      <i class="fas fa-ellipsis-v"></i>
-                    </a>
-
-                  </div>
-
-                </div>
-
-              </header>
-
-              <!-- main della sezione chat -->
-              <div class="mainchat">
-
-                <div v-for="(messaggio, index) in corrispondenze[attivo].messaggi" :class="messaggio.stato" class="bloccochat">
-
-
-                  <div class="messaggio">
-
-                    <span style="font-size: 18px;">{{messaggio.text}}</span>
-                    <br>
-                    <span style="font-size: 10px;">{{messaggio.orario}}
-                    {{messaggio.data}}</span>
-
-
-                  </div>
-
-
-                </div>
-                <br>
-
+              <a href="#"><i style="color:lightblue;" class="fas fa-bell-slash fa-2x"></i></a>
+              <div class="testobanner">
+                <h5>Ricevi notifiche dei nuovi messaggi</h5>
+                <a href="#">attiva notifiche desktop</a>
               </div>
 
-              <!-- footer della sezione chat -->
-              <div class="foot">
 
-                <!-- bottone emoticon -->
-                <div class="emo">
+            </div>
 
-                  <a href="#"><i class="fas fa-grin-alt fa-2x"></i></a>
+            <!-- barra di ricerca -->
+            <div class="ricerca-contatti">
 
+              <button type="button" name="button"><i style="color:grey;" class="fas fa-search"></i></button>
+              <input v-model="contatto" @input="cercaContatto()" type="text" name="" value="">
+
+            </div>
+
+            <!-- copertina chat aperte -->
+            <div class="chats">
+
+              <div v-if="item.visible" @click="selezioneItem(i)" v-for="(item, i) in corrispondenze" :key="item.id" class="head-friend">
+
+                <div class="avatar">
+                  <img :src="corrispondenze[i].immagine" alt="">
                 </div>
-
-                <!-- input per scrivere sulla chat -->
-                <div class="inputchat">
-
-                  <input v-on:keyup.enter="inviaMsg(); autoMsg(event)" v-model="message" placeholder="scrivi un messaggio" type="text" name="" value="">
-
+                <div class="interlocutore">
+                  <h5>{{corrispondenze[i].nome}}</h5>
+                  <h6>{{ corrispondenze[i].messaggi[corrispondenze[i].messaggi.length - 1].text }}</h6>
                 </div>
-
-                <!-- bottone per msg vocale -->
-                <div @click="inviaMsg(); autoMsg(event)" class="vocale">
-
-                  <a href="#"><i class="fas fa-microphone fa-2x"></i></a>
-
+                <div class="datetimes-sx">
+                  <h6>{{ corrispondenze[i].messaggi[corrispondenze[i].messaggi.length - 1].orario }}</h6>
+                  <h6>{{ corrispondenze[i].messaggi[corrispondenze[i].messaggi.length - 1].data }}</h6>
                 </div>
 
               </div>
@@ -182,8 +97,90 @@
 
           </div>
 
+          <!-- macroblocco destro sezione chat -->
+          <div class="macro-dx">
+
+            <!-- header della sezione chat -->
+            <header>
+
+              <!-- blocco superiore in cui c'è contatto con cui stai messaggiando e icone -->
+              <div class="head">
+
+                <!-- contatto con cui stai messaggiando al momento -->
+                <div class="user">
+                  <img :src="corrispondenze[attivo].immagine" alt="">
+                  <div class="interlocutore">
+                    <h5>{{corrispondenze[attivo].nome}}</h5>
+                    <h6>Ultimo accesso:</h6>
+                    <h6>{{corrispondenze[attivo].messaggi[corrispondenze[attivo].messaggi.length - 1].data}}</h6>
+                    <h6>{{corrispondenze[attivo].messaggi[corrispondenze[attivo].messaggi.length - 1].orario}}</h6>
+                  </div>
+                </div>
+
+                <div class="icons">
+                  <!-- icone nella barra del contatto con cui stai messaggiando -->
+                  <a href="#"><i style="color:white;" class="fas fa-search"></i></a>
+                  <a href="#"><i style="color:white;" class="fas fa-paperclip"></i></a>
+                  <a style="color:white;" href="#"><i class="fas fa-ellipsis-v"></i></a>
+
+                </div>
+
+              </div>
+
+            </header>
+
+            <!-- main della sezione chat -->
+            <div class="mainchat">
+
+              <div v-for="(messaggio, index) in corrispondenze[attivo].messaggi" :class="messaggio.stato" class="bloccochat">
+
+                <div class="messaggio">
+
+                  <span style="font-size: 18px;">{{messaggio.text}}</span>
+                  <br>
+                  <span style="font-size: 10px;">{{messaggio.orario}}
+                  {{messaggio.data}}</span>
+
+                </div>
+
+              </div>
+              <br>
+
+            </div>
+
+            <!-- footer della sezione chat -->
+            <div class="foot">
+
+              <!-- bottone emoticon -->
+              <div class="emo">
+
+                <a href="#"><i class="fas fa-grin-alt fa-2x"></i></a>
+
+              </div>
+
+              <!-- input per scrivere sulla chat -->
+              <div class="inputchat">
+
+                <input v-on:keyup.enter="inviaMsg(); autoMsg(event)" v-model="message" placeholder="scrivi un messaggio" type="text" name="" value="">
+
+              </div>
+
+                <!-- bottone per msg vocale -->
+              <div @click="inviaMsg(); autoMsg(event)" class="vocale">
+
+                <a href="#"><i class="fas fa-microphone fa-2x"></i></a>
+
+              </div>
+
+            </div>
+
+          </div>
+
         </main>
+
       </div>
+
+    </div>
 
     <script src="js/script.js" charset="utf-8"></script>
 
