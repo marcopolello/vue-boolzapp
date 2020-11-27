@@ -1,14 +1,3 @@
-// Per oggi saremo sulla milestone2, chat differenziate:
-// cliccando sulla chat vedo quella corrispondente;
-// con header con dati relativi a chat attiva;
-// relativa chat in elenco rimane selezionata
-// NOTE
-// prima di scrivere qualsiasi cosa di codice fate una bella bella pre-analisi sulla struttura dei dati;
-// usate carta o penna o quello che volete, ma fin quando non avete definito i dati che vi servono e  come strutturarli, non potete far molto;
-// cercate di descrivere nel mondo reale di cosa state parlando, che “materia” state trattando e definendo;
-// poi la riportate a ciò che JS ci mette a disposizione (array, oggetti, stringhe, numeri…. etc.).
-
-
 var app = new Vue ({
   el: '#app',
   data: {
@@ -25,7 +14,7 @@ var app = new Vue ({
             data: "24 11 2020"
           },
           {
-            text: "ehila",
+            text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             stato: "ricevuto",
             orario: "12:04",
             data: "24 11 2020"

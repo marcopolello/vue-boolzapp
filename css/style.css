@@ -52,6 +52,7 @@ main{
 } */
 /* fine debug */
 
+/* 2 blocchi: sx(elenco contatti), dx(sezione chat) */
 .macro-sx{
   width: 35%;
   background-color: white;
@@ -93,6 +94,7 @@ main{
 .icons a{
   margin: 0 10px;
 }
+
 /* banner x attivazione notitiche */
 #banner{
   display: flex;
@@ -176,59 +178,28 @@ header{
   overflow-y: auto;
   height: 390px;
   max-height: 390px;
-  border: 1px solid lightgrey;
   padding: 20px;
 }
-.mainchat::after {
-  content: "";
-  clear: both;
-  display: table;
+
+/* singolo blocchetto per ogni messaggio */
+.messaggio-singolo{
+  width: 60%;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 15px;
 }
-
-
-/* misure chat */
-.bloccochat{
-
-}
-
 /* messaggio inviato, classe dinamica */
 .inviato{
+  text-align: right;
   float: right;
   background-color: lightgreen;
-  border-radius: 5px;
-  padding: 10px;
-  text-align: right;
-  width: 60%;
-  margin-bottom: 10px;
 }
 /* messaggio ricevuto, classe dinamica */
 .ricevuto{
   float: left;
   background-color: white;
-  border-radius: 5px;
-  padding: 10px;
-  width: 60%;
-  margin-bottom: 10px;
 }
-/* chat user */
-.user p, .datetimes{
-  text-align: right;
-}
-.user .chatmax{
-  background-color: lightgreen;
-  border-radius: 5px;
-  padding: 10px;
-}
-.speaker .chatmax{
-  background-color: white;
-  border-radius: 5px;
-  padding: 10px;
-}
-.mainchat .datetimes{
-  margin-top: 5px;
-}
-
-
+/* footer della chat in cui c'è barra x scrivere testo */
 .foot{
   display: flex;
   background-color: white;

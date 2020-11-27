@@ -132,19 +132,18 @@
             <!-- main della sezione chat -->
             <div class="mainchat">
 
-              <div v-for="(messaggio, index) in corrispondenze[attivo].messaggi" :class="messaggio.stato" class="bloccochat">
+              <div v-for="(messaggio, index) in corrispondenze[attivo].messaggi"
+              :class="messaggio.stato"
+              class="messaggio-singolo"
+              >
 
-                <div class="messaggio">
-
-                  <span style="font-size: 18px;">{{messaggio.text}}</span>
-                  <br>
-                  <span style="font-size: 10px;">{{messaggio.orario}}
-                  {{messaggio.data}}</span>
-
-                </div>
+                <span style="font-size: 18px;">{{messaggio.text}}</span>
+                <br>
+                <span style="font-size: 10px;">{{messaggio.orario}}
+                  {{messaggio.data}}
+                </span>
 
               </div>
-              <br>
 
             </div>
 
