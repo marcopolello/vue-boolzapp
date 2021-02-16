@@ -130,13 +130,18 @@
             </header>
 
             <!-- main della sezione chat -->
-            <div class="mainchat">
+            <div id="mainchat">
 
               <div v-for="(messaggio, index) in corrispondenze[attivo].messaggi"
               :class="messaggio.stato"
               class="messaggio-singolo"
               >
-
+                <div class="opzioni-messaggio">
+                  <i class="opzioni fas fa-chevron-down" @click= "opzioniMessaggio(index)"></i>
+                  <div style="color:red;" :class="messaggio.opzioniMessaggio" @click= "deleteMessage(index)">
+                    Elimina messaggio
+                  </div>
+                </div>
                 <span style="font-size: 18px;">{{messaggio.text}}</span>
                 <br>
                 <span style="font-size: 10px;">{{messaggio.orario}}
@@ -181,7 +186,8 @@
 
     </div>
 
-    <script src="js/script.js" charset="utf-8"></script>
+    <script src="js/generateWords.js" charset="utf-8"></script>
+    <script src="js/script.js" charset="utf-8"></script>    
 
   </body>
 </html>
