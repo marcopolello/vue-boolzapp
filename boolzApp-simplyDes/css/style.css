@@ -1,0 +1,234 @@
+/* regole generali */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Catamaran', sans-serif;
+}
+/* misure x tutte le img(foto contatti)*/
+img{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+/* div che contiene i 2 macroblocchi flexxati */
+main{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+
+/* debug dei 2 macroblocchi flexxati */
+/* [class*="macro-"] {
+  min-height: 100px;
+  max-height: 100%;
+  border: solid 1px black;
+  padding: 2px;
+  text-align: center;
+} */
+/* fine debug */
+
+/* 2 blocchi: sx(elenco contatti), dx(sezione chat) */
+.macro-sx{
+  width: 35%;
+  background-color: white;
+}
+.macro-dx{
+  width: 65%;
+  background-image: url(../img/mine.jpg);
+}
+
+/* debug div dei due macroblocchi app */
+/* .macro-sx div{
+  min-height: 80px;
+  background-color: lightblue;
+  border: 1px solid black;
+} */
+/* .macro-dx div{
+  min-height: 100px;
+  background-color: green;
+  border: 1px solid black;
+} */
+
+/* CLASSI USATE SU ENTRAMBI MACRO */
+/* head dei 2 macroelementi */
+.head{
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  background-color: lightgrey;
+}
+/* fotouser con nome usato su entrambi head */
+/* icone usate su entrambi head macroelementi */
+.user, .icons{
+  display: flex;
+  align-items: center;
+}
+.macro-sx .user h5{
+  margin-left: 10px;
+}
+.icons a{
+  margin: 0 10px;
+}
+
+/* banner x attivazione notitiche */
+#banner{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: lightblue;
+  height: 70px;
+}
+#banner > a{
+  margin: 0 30px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+/* barra di ricerca contatti */
+.ricerca-contatti{
+  display: flex;
+  height: 40px;
+}
+.ricerca-contatti button{
+  width: 15%;
+  background-color: white;
+  border: 0;
+}
+.ricerca-contatti input{
+  width: 85%;
+  border: 0;
+}
+
+/* sezione chat aperte */
+.chats{
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  max-height: 500px;
+}
+/* ogni chat delle chats aperte */
+.head-friend{
+  margin: 5px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.avatar{
+  width: 20%;
+}
+.interlocutore{
+  align-self: flex-start;
+  margin-top: 5px;
+  width: 60%;
+}
+.interlocutore h6{
+  max-height: 24px;
+  overflow-y:hidden;
+}
+.datetimes-sx{
+  align-self: flex-start;
+  width: 20%;
+  text-align: right;
+}
+.datetimes h6{
+  color: grey;
+}
+
+
+
+/* sezione chat, MACROBLOCCO DESTRO */
+header{
+  border-left: 1px solid grey;
+}
+.macro-dx .interlocutore{
+  margin-left: 10px;
+}
+
+/* blocco in cui compaiono le chat */
+#mainchat{
+  overflow-y: auto;
+  height: 510px;
+  padding: 20px;
+}
+
+/* singolo blocchetto per ogni messaggio */
+.messaggio-singolo{
+  width: 60%;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+/* icona per procedere con il delete msg */
+.opzioni-messaggio {
+  display: none;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.messaggio-singolo:hover .opzioni-messaggio{
+  display: block;
+}
+.none {
+  display: none;
+}
+.block {
+  display: block;
+}
+/* messaggio inviato, classe dinamica */
+.inviato{
+  text-align: right;
+  float: right;
+  background-color: lightgreen;
+}
+/* messaggio ricevuto, classe dinamica */
+.ricevuto{
+  float: left;
+  background-color: white;
+}
+/* footer della chat in cui c'è barra x scrivere testo */
+.foot{
+  display: flex;
+  background-color: white;
+  height: 70px;
+  position:fixed;
+  bottom: 0;
+  width: calc(100% - 35%)
+}
+.foot a > i{
+  color: grey;
+}
+.inputchat{
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inputchat input{
+  width: 100%;
+  height: 80%;
+}
+.emo, .vocale{
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* classe utili x js */
+.selected{
+  background-color: lightgrey;
+  padding: 5px;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* REGOLE MEDIA QUERIES */
+/* REGOLE MEDIA QUERIES PARTICOLARI */
+@media all and (max-height: 580px){
+  .background-bot{
+    height: 120vh;
+  }
+}
