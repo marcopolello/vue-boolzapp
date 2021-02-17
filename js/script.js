@@ -12,18 +12,21 @@ var app = new Vue ({
             stato: "inviato",
             orario: "12:03",
             data: "24 11 2020",
+            opzioniMessaggio: "none",
           },
           {
             text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             stato: "ricevuto",
             orario: "12:04",
-            data: "24 11 2020"
+            data: "24 11 2020",
+            opzioniMessaggio: "none",
           },
           {
             text: "come va?",
             stato: "inviato",
             orario: "12:05",
-            data: "24 11 2020"
+            data: "24 11 2020",
+            opzioniMessaggio: "none",
           },
         ],
         visible: true
@@ -36,19 +39,22 @@ var app = new Vue ({
             text: "oibò",
             stato: "inviato",
             orario: "12:03",
-            data: "24 11 2020"
+            data: "24 11 2020",
+            opzioniMessaggio: "none",
           },
           {
             text: "ciao sono Luca",
             stato: "ricevuto",
             orario: "12:04",
-            data: "24 11 2020"
+            data: "24 11 2020",
+            opzioniMessaggio: "none",
           },
           {
             text: "che fai oggi??",
             stato: "inviato",
             orario: "12:05",
-            data: "24 11 2020"
+            data: "24 11 2020",
+            opzioniMessaggio: "none",
           },
         ],
         visible: true
@@ -61,49 +67,57 @@ var app = new Vue ({
             text: "chi sei?",
             stato: "inviato",
             orario: "12:03",
-            data: "24 11 2020"
+            data: "24 11 2020",
+            opzioniMessaggio: "none",
           },
           {
             text: "ciao sono Marco",
             stato: "ricevuto",
             orario: "12:04",
-            data: "24 11 2020"
+            data: "24 11 2020",
+            opzioniMessaggio: "none",
           },
           {
             text: "che fai??",
             stato: "inviato",
             orario: "12:05",
-            data: "24 11 2020"
+            data: "24 11 2020",
+            opzioniMessaggio: "none",
           },
           {
             text: "che fai??",
             stato: "inviato",
             orario: "12:05",
-            data: "24 11 2020"
+            data: "24 11 2020",
+            opzioniMessaggio: "none",
           },
           {
             text: "che fai??",
             stato: "inviato",
             orario: "12:05",
-            data: "24 11 2020"
+            data: "24 11 2020",
+            opzioniMessaggio: "none",
           },
           {
             text: "chi sei?",
             stato: "inviato",
             orario: "12:03",
-            data: "24 11 2020"
+            data: "24 11 2020",
+            opzioniMessaggio: "none",
           },
           {
             text: "ciao sono Marco",
             stato: "ricevuto",
             orario: "12:04",
-            data: "24 11 2020"
+            data: "24 11 2020",
+            opzioniMessaggio: "none",
           },
           {
             text: "ciao sono Marco",
             stato: "ricevuto",
             orario: "12:04",
-            data: "24 11 2020"
+            data: "24 11 2020",
+            opzioniMessaggio: "none",
           },
         ],
         visible: true
@@ -116,19 +130,22 @@ var app = new Vue ({
             text: "ciao",
             stato: "inviato",
             orario: "12:03",
-            data: "24 11 2020"
+            data: "24 11 2020",
+            opzioniMessaggio: "none",
           },
           {
             text: "ehila sono Michele",
             stato: "ricevuto",
             orario: "12:04",
-            data: "24 11 2020"
+            data: "24 11 2020",
+            opzioniMessaggio: "none",
           },
           {
             text: "che stai facendo??",
             stato: "inviato",
             orario: "12:05",
-            data: "24 11 2020"
+            data: "24 11 2020",
+            opzioniMessaggio: "none",
           },
         ],
         visible: true
@@ -141,19 +158,22 @@ var app = new Vue ({
             text: "ehi, Andrea",
             stato: "inviato",
             orario: "12:03",
-            data: "24 11 2020"
+            data: "24 11 2020",
+            opzioniMessaggio: "none",
           },
           {
             text: "ehila sono Andrea",
             stato: "ricevuto",
             orario: "12:04",
-            data: "24 11 2020"
+            data: "24 11 2020",
+            opzioniMessaggio: "none",
           },
           {
             text: "lo so",
             stato: "inviato",
             orario: "12:05",
-            data: "24 11 2020"
+            data: "24 11 2020",
+            opzioniMessaggio: "none",
           },
         ],
         visible: true
@@ -166,19 +186,22 @@ var app = new Vue ({
             text: "ciao sono Io",
             stato: "inviato",
             orario: "12:03",
-            data: "24 11 2020"
+            data: "24 11 2020",
+            opzioniMessaggio: "none",
           },
           {
             text: "ehila sono Lucia",
             stato: "ricevuto",
             orario: "12:04",
-            data: "24 11 2020"
+            data: "24 11 2020",
+            opzioniMessaggio: "none",
           },
           {
             text: "sono contento per te",
             stato: "inviato",
             orario: "12:05",
-            data: "24 11 2020"
+            data: "24 11 2020",
+            opzioniMessaggio: "none",
           },
         ],
         visible: true
@@ -191,19 +214,22 @@ var app = new Vue ({
             text: "ciao",
             stato: "inviato",
             orario: "12:03",
-            data: "24 11 2020"
+            data: "24 11 2020",
+            opzioniMessaggio: "none",
           },
           {
             text: "ehila sono Simone",
             stato: "ricevuto",
             orario: "12:04",
-            data: "24 11 2020"
+            data: "24 11 2020",
+            opzioniMessaggio: "none",
           },
           {
             text: "ma dai sei Simone!? assurdo!",
             stato: "inviato",
             orario: "12:05",
-            data: "24 11 2020"
+            data: "24 11 2020",
+            opzioniMessaggio: "none",
           },
         ],
         visible: true
@@ -230,7 +256,8 @@ var app = new Vue ({
         text: "",
         stato: "inviato",
         orario: "12:05",
-        data: "24 11 2020"
+        data: "24 11 2020",
+        opzioniMessaggio: "none",
       };
       // l'input utente diventa il valore della chiave text
       nuovoObj.text = this.message;
@@ -245,6 +272,7 @@ var app = new Vue ({
 
       // reset dell'input x nuovo msg
       this.message= "";
+      this.scrollDown();
     },
     // funzione che scatena il timer
     autoMsg: function (event) {
@@ -256,14 +284,24 @@ var app = new Vue ({
     },
     // funzione che crea nuovo obj allo scadere del timer
     randomMsg() {
+      // azzero ogni nuova risposta per far si che sia diversa ogni volta
+      let risposta = "";
+      // generateWords funzione CHE MI ARRIVA DAL generateWords.JS
+      let text = generateWords(Math.floor((Math.random() * 10) + 1));
+      for (var i = 0; i < text.length; i++) {
+        // console.log(text[i]);
+        risposta = risposta + " " + text[i];
+      }
       // stampo un oggetto ricevuto random
       let nuovoObj = {
-        text: "sono passati già 2 secondi!?",
+        text: risposta,
         stato: "ricevuto",
         orario: "12:08",
-        data: "24 11 2020"
+        data: "24 11 2020",
+        opzioniMessaggio: "none",
       };
       this.corrispondenze[this.attivo].messaggi.push(nuovoObj);
+      this.scrollDown();
     },
     cercaContatto() {
       this.corrispondenze.forEach((item, i) => {
@@ -275,7 +313,23 @@ var app = new Vue ({
           item.visible = false;
         }
       });
-
+    },
+    opzioniMessaggio: function(i) {
+      if (this.corrispondenze[this.attivo].messaggi[i].opzioniMessaggio === "none") {
+        this.corrispondenze[this.attivo].messaggi[i].opzioniMessaggio = "block";
+      } else {
+        this.corrispondenze[this.attivo].messaggi[i].opzioniMessaggio = "none";
+      };
+    },
+    deleteMessage: function (i) {
+      // console.log(i);
+      this.corrispondenze[this.attivo].messaggi.splice(i, 1);
+    },
+    scrollDown: function() {
+      setTimeout(function(){
+        let chat = document.getElementById("mainchat");
+        chat.scrollTop = chat.scrollHeight;
+      }, 1);
     }
   }
 })

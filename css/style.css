@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Catamaran', sans-serif;
 }
 /* regole macroelementi */
 .background-top{
@@ -28,6 +29,9 @@
   /* debug */
   /* background-color: white; */
   /* debug */
+}
+#app:hover{
+    border: 1px solid grey;
 }
 /* misure x tutte le img(foto contatti)*/
 img{
@@ -132,11 +136,12 @@ main{
   flex-direction: column;
   overflow-y: auto;
   min-height: 100px;
-  max-height: 350px;
+  max-height: 470px;
 }
 /* ogni chat delle chats aperte */
 .head-friend{
   margin: 5px;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
 }
@@ -172,10 +177,9 @@ header{
 }
 
 /* blocco in cui compaiono le chat */
-.mainchat{
+#mainchat{
   overflow-y: auto;
-  height: 390px;
-  max-height: 390px;
+  height: 510px;
   padding: 20px;
 }
 
@@ -185,6 +189,21 @@ header{
   padding: 10px;
   border-radius: 10px;
   margin-bottom: 15px;
+}
+/* icona per procedere con il delete msg */
+.opzioni-messaggio {
+  display: none;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.messaggio-singolo:hover .opzioni-messaggio{
+  display: block;
+}
+.none {
+  display: none;
+}
+.block {
+  display: block;
 }
 /* messaggio inviato, classe dinamica */
 .inviato{
